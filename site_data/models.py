@@ -44,15 +44,15 @@ class Category(Base):
 
 class CourseCategory(Base):
     colors = (
-        ("edu_cat_2 cat-1", "edu_cat_2 cat-1"),
-        ("edu_cat_2 cat-2", "edu_cat_2 cat-2"),
-        ("edu_cat_2 cat-3", "edu_cat_2 cat-3"),
-        ("edu_cat_2 cat-4", "edu_cat_2 cat-4"),
-        ("edu_cat_2 cat-10", "edu_cat_2 cat-10"),
-        ("edu_cat_2 cat-6", "edu_cat_2 cat-6"),
-        ("edu_cat_2 cat-7", "edu_cat_2 cat-7"),
-        ("edu_cat_2 cat-8", "edu_cat_2 cat-8"),
-        ("edu_cat_2 cat-9", "edu_cat_2 cat-9"),
+        ("cat-1", "cat-1"),
+        ("cat-2", "cat-2"),
+        ("cat-3", "cat-3"),
+        ("cat-4", "cat-4"),
+        ("cat-10", "cat-10"),
+        ("cat-6", "cat-6"),
+        ("cat-7", "cat-7"),
+        ("cat-8", "cat-8"),
+        ("cat-9", "cat-9"),
     )
     name = models.CharField(_("name"), max_length=50)
     image = models.ImageField(_("image"), upload_to="course_category")
