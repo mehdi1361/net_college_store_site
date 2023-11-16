@@ -15,7 +15,13 @@ class SliderAdmin(admin.ModelAdmin):
 
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name', )
-    list_editable = ('name',)
+    list_display = ('id', 'name', "image_tag", "active")
+    list_editable = ('name', "active")
+    
+    readonly_fields = ['image_tag']
+    
+    def image_tag(self, obj):
+        return mark_safe(f'<img src={obj.image.url} width="80" height="22" />')
+
 
 
