@@ -17,11 +17,13 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls.static import static
 from django.conf import settings
-from site_data.views import index
+from site_data.views import index, list_course_category, list_category
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name="index"),
+    path('category/course/<int:course_category_id>/', list_course_category, name="list_course_category"),
+    path('category/<int:category_id>/', list_category, name="list_category"),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

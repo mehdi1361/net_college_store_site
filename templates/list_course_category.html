@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load  static %}
+{% load banner_tag %}
+{% load show_category_tag %}
+{% load course_category_tag %}
+{% load course_tags %}
+{% load  menu_tag %}
+{% load l10n %}
+
+{% block title%}
+	<title>{{ title }}</title>
+{% endblock %}
+
+{% block menu %}
+	{% show_menu %}
+{% endblock %}
+
+{% block content %}
+<div id="main-wrapper">
+	<div class="clearfix"></div>
+		{% show_slider %}
+	</div>
+	<div class="row justify-content-center">
+		{% for course in courses %}
+			{% single_course course %}
+		{% endfor %}
+	
+	</div>
+</div>  
+
+{% endblock%}
