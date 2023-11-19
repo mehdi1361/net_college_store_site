@@ -36,7 +36,7 @@
                     <li><a href="#">مرکز آموزشی<span class="submenu-indicator"></span></a>
                         <ul class="nav-dropdown nav-submenu">
                             {% for ca in categories %}
-                            <li><a href="about.html">{{ ca.name }}</a></li>
+                            <li><a href="{% url 'list_category' ca.id %}">{{ ca.name }}</a></li>
                             {% endfor%}
                             
                         </ul>
