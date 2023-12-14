@@ -4,6 +4,9 @@ from django.utils.translation import gettext_lazy as _
 from base.models import Base
 from site_data.models import CourseCategory, Category
 
+from django.contrib.auth.models import User
+
+
 class Course(Base):
     COURSE_LEVEL = (
         ('begginer', 'begginer'), 
@@ -21,6 +24,7 @@ class Course(Base):
         )
     image = models.ImageField(_("image"), upload_to="course", null=True)
     level = models.CharField(_("level"), max_length=50, choices=COURSE_LEVEL, default='begginer')
+    lecture = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
     class Meta:
         db_table = "course"
         verbose_name = "courses"
@@ -29,3 +33,28 @@ class Course(Base):
     @property
     def get_price_with_discount(self):
         return f'{self.discount:,}'
+    
+    def __str__(self):
+        return self.title
+    
+
+class Section(Base):
+    title = models.CharField(_("title"), max_length=50)
+    course = models.ForeignKey('Course', on_delete=models.CASCADE, related_name="sections", null=True, blank=True)
+
+    class Meta:
+        db_table = "section"
+
+    def __str__(self):
+        return self.title
+
+
+class Lesson(Base):
+    title = models.CharField(_("title"), max_length=50)
+    course = models.ForeignKey('Section', on_delete=models.CASCADE, related_name="lessons", null=True, blank=True)
+
+    class Meta:
+        db_table = "lesson"
+
+    def __str__(self):
+        return self.title

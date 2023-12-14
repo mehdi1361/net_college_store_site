@@ -112,24 +112,24 @@
 											<div id="accordionExample" class="accordion shadow circullum">
 
 											<!-- Part 1 -->
-									<div class="card">
-									  <div id="headingOne" class="card-header bg-white shadow-sm border-0">
-										<h6 class="mb-0 accordion_title"><a href="#" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="d-block position-relative text-dark collapsible-link py-2 collapsed">مقدمه و معرفی دوره</a></h6>
-									  </div>
-									  <div id="collapseOne" aria-labelledby="headingOne" data-parent="#accordionExample" class="collapse" style="">
-										<div class="card-body pl-3 pr-3">
-											<ul class="lectures_lists">
-												<li class="complete"><div class="lectures_lists_title"><i class="fas fa-check dios"></i></div>نحوه ایمپورت کردن فایل‌ها و مرتب سازی آنها<span class="cls_timing">40:20</span></li>
-												<li class="progressing"><div class="lectures_lists_title"><i class="fas fa-play dios"></i></div>پوشه بندی و ساختار فایل‌ها به روش من<span class="cls_timing">20:12</span></li>
-												<li class="unview"><div class="lectures_lists_title"><i class="fa fa-lock dios lock"></i></div>آشنایی با پنل‌های اصلی در پریمیر<span class="cls_timing">32:10</span></li>
-												<li class="unview"><div class="lectures_lists_title"><i class="fa fa-lock dios lock"></i></div>اجرای پریمیر و ایجاد اولین پروژه در پریمیر<span class="cls_timing">25:05</span></li>
-												<li class="unview"><div class="lectures_lists_title"><i class="fa fa-lock dios lock"></i></div>آشنایی با فضای نرم افزار پریمیر و درک Workspace<span class="cls_timing">18:10</span></li>
-											</ul>
-										</div>
-									  </div>
-									</div>
-
+									
 									<!-- Part 2 -->
+									{% for section in course.sections.all %}
+											<div class="card">
+												<div id="headingTwo" class="card-header bg-white shadow-sm border-0">
+												<h6 class="mb-0 accordion_title"><a href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" class="d-block position-relative collapsed text-dark collapsible-link py-2">{{ section.title }}</a></h6>
+												</div>
+												<div id="collapseTwo" aria-labelledby="headingTwo" data-parent="#accordionExample" class="collapse">
+												<div class="card-body pl-3 pr-3">
+													<ul class="lectures_lists">
+														{% for lesson in  section.lessons.all %}
+															<li class="unview"><div class="lectures_lists_title"><i class="fa fa-lock dios lock"></i></div>{{ lesson.title }}<span class="cls_timing">32:10</span></li>
+														{% endfor %}
+													</ul>
+												</div>
+												</div>
+											</div>
+									{% endfor %}
 									<div class="card">
 									  <div id="headingTwo" class="card-header bg-white shadow-sm border-0">
 										<h6 class="mb-0 accordion_title"><a href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" class="d-block position-relative collapsed text-dark collapsible-link py-2">شروع کار با پریمیر پرو</a></h6>
@@ -401,7 +401,7 @@
 								
 								<div class="ed_view_price pl-4">
 									<span>قیمت ویژه</span>
-									<h2 class="theme-cl font-2">149 تومان</h2>
+									<h2 class="theme-cl font-2">{{ course.get_price_with_discount }}</h2>
 								</div>
 								
 								<div class="ed_view_short pl-4 pr-4 pb-2">
