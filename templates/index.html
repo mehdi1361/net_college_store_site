@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load  static %}
+{% load banner_tag %}
+{% load show_category_tag %}
+{% load course_category_tag %}
+{% load course_tags %}
+{% load  menu_tag %}
+{% load l10n %}
+
+{% block title%}
+	<title>دوره های آموزشی نت کالج</title>
+{% endblock %}
+
+{% block menu %}
+	{% show_menu %}
+{% endblock %}
+
+{%block content%}
+        <div id="main-wrapper">
+			<div class="clearfix"></div>
+			{% show_slider %}
+			{% show_category %}
+			{% show_course_category%}
+			<section class="min gray">
+				<div class="container">
+					
+					<div class="row justify-content-center">
+						<div class="col-lg-7 col-md-8">
+							<div class="sec-heading center">
+								<h3 class="font-2">جدیدترین دوره های test<span class="theme-cl">رایگان</span></h3>
+								<p>با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد.</p>
+							</div>
+						</div>
+					</div>
+					
+					<div class="row justify-content-center">
+						{% for course in courses %}
+							{% single_course course %}
+						{% endfor %}
+	
+				</div>
+			</section>
+		</div>	
+			
+{% endblock%}
