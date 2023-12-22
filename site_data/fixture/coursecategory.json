@@ -1,0 +1,110 @@
+[
+{
+    "model": "site_data.coursecategory",
+    "pk": 1,
+    "fields": {
+        "created_date": "2023-11-16T14:40:35.155Z",
+        "updated_date": "2023-11-16T14:40:24Z",
+        "active": true,
+        "name": "مهندسی نرم افزار",
+        "image": "course_category/content.png",
+        "color": "cat-9"
+    }
+},
+{
+    "model": "site_data.coursecategory",
+    "pk": 2,
+    "fields": {
+        "created_date": "2023-11-16T14:42:03.264Z",
+        "updated_date": "2023-11-16T14:41:43Z",
+        "active": true,
+        "name": "استارت آپ",
+        "image": "course_category/briefcase.png",
+        "color": "cat-8"
+    }
+},
+{
+    "model": "site_data.coursecategory",
+    "pk": 3,
+    "fields": {
+        "created_date": "2023-11-16T14:42:37.463Z",
+        "updated_date": "2023-11-16T14:42:06Z",
+        "active": true,
+        "name": "مالی و حسابداری",
+        "image": "course_category/career.png",
+        "color": "cat-7"
+    }
+},
+{
+    "model": "site_data.coursecategory",
+    "pk": 4,
+    "fields": {
+        "created_date": "2023-11-16T14:42:59.865Z",
+        "updated_date": "2023-11-16T14:42:41Z",
+        "active": true,
+        "name": "فناوری و اطلاعات",
+        "image": "course_category/python.png",
+        "color": "cat-6"
+    }
+},
+{
+    "model": "site_data.coursecategory",
+    "pk": 5,
+    "fields": {
+        "created_date": "2023-11-16T14:43:46.370Z",
+        "updated_date": "2023-11-16T14:43:16Z",
+        "active": true,
+        "name": "طراحی و گرافیک",
+        "image": "course_category/designer.png",
+        "color": "cat-10"
+    }
+},
+{
+    "model": "site_data.coursecategory",
+    "pk": 6,
+    "fields": {
+        "created_date": "2023-11-16T14:44:21.251Z",
+        "updated_date": "2023-11-16T14:43:57Z",
+        "active": true,
+        "name": "دیجیتال مارکتنیگ",
+        "image": "course_category/speaker.png",
+        "color": "cat-4"
+    }
+},
+{
+    "model": "site_data.coursecategory",
+    "pk": 7,
+    "fields": {
+        "created_date": "2023-11-16T14:44:56.824Z",
+        "updated_date": "2023-11-16T14:44:25Z",
+        "active": true,
+        "name": "هنر",
+        "image": "course_category/photo.png",
+        "color": "cat-3"
+    }
+},
+{
+    "model": "site_data.coursecategory",
+    "pk": 8,
+    "fields": {
+        "created_date": "2023-11-16T14:45:26.167Z",
+        "updated_date": "2023-11-16T14:45:02Z",
+        "active": true,
+        "name": "علوم انسانی",
+        "image": "course_category/yoga.png",
+        "color": "cat-2"
+    }
+},
+{
+    "model": "site_data.coursecategory",
+    "pk": 9,
+    "fields": {
+        "created_date": "2023-11-16T14:45:55.616Z",
+        "updated_date": "2023-11-16T14:45:33Z",
+        "active": true,
+        "name": "سبک زندگی",
+        "image": "course_category/health.png",
+        "color": "cat-2"
+    }
+}
+]

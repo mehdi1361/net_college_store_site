@@ -1,0 +1,50 @@
+[
+{
+    "model": "site_data.category",
+    "pk": 1,
+    "fields": {
+        "created_date": "2023-11-16T13:41:35.529Z",
+        "updated_date": "2023-11-16T13:41:02Z",
+        "active": true,
+        "name": "یودمی",
+        "description": "تست",
+        "image": "category/lg-5.png"
+    }
+},
+{
+    "model": "site_data.category",
+    "pk": 2,
+    "fields": {
+        "created_date": "2023-11-16T13:43:43.488Z",
+        "updated_date": "2023-11-16T13:43:07Z",
+        "active": true,
+        "name": "udacity",
+        "description": "test",
+        "image": "category/lg-7.png"
+    }
+},
+{
+    "model": "site_data.category",
+    "pk": 3,
+    "fields": {
+        "created_date": "2023-11-16T13:44:09.542Z",
+        "updated_date": "2023-11-16T13:43:53Z",
+        "active": true,
+        "name": "coursera",
+        "description": "coursera",
+        "image": "category/lg-1.png"
+    }
+},
+{
+    "model": "site_data.category",
+    "pk": 4,
+    "fields": {
+        "created_date": "2023-11-16T13:44:47.176Z",
+        "updated_date": "2023-11-16T13:44:16Z",
+        "active": true,
+        "name": "unacademy",
+        "description": "test",
+        "image": "category/lg-6.png"
+    }
+}
+]

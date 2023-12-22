@@ -1,0 +1,35 @@
+[
+{
+    "model": "education.section",
+    "pk": 1,
+    "fields": {
+        "created_date": "2023-12-14T14:38:36.563Z",
+        "updated_date": "2023-12-14T14:38:30Z",
+        "active": true,
+        "title": "section 1",
+        "course": 2
+    }
+},
+{
+    "model": "education.section",
+    "pk": 2,
+    "fields": {
+        "created_date": "2023-12-14T14:40:56.557Z",
+        "updated_date": "2023-12-14T14:40:35Z",
+        "active": true,
+        "title": "section 2",
+        "course": 2
+    }
+},
+{
+    "model": "education.section",
+    "pk": 3,
+    "fields": {
+        "created_date": "2023-12-14T14:40:56.558Z",
+        "updated_date": "2023-12-14T14:40:42Z",
+        "active": true,
+        "title": "section3",
+        "course": 2
+    }
+}
+]

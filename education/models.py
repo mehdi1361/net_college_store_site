@@ -4,7 +4,7 @@ from django.utils.translation import gettext_lazy as _
 from base.models import Base
 from site_data.models import CourseCategory, Category
 
-from django.contrib.auth.models import User
+from user.models import UserAccount
 
 
 class Course(Base):
@@ -24,7 +24,7 @@ class Course(Base):
         )
     image = models.ImageField(_("image"), upload_to="course", null=True)
     level = models.CharField(_("level"), max_length=50, choices=COURSE_LEVEL, default='begginer')
-    lecture = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
+    lecture = models.ForeignKey(UserAccount, on_delete=models.CASCADE, null=True, blank=True)
     class Meta:
         db_table = "course"
         verbose_name = "courses"
